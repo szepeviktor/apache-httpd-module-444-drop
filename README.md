@@ -11,6 +11,7 @@ apt-get install apache2-dev binutils
 ## Installation
 
 ```shell
+install -d -m755 /usr/local/lib/apache2/modules
 apxs -c -S LIBEXECDIR=/usr/local/lib/apache2/modules mod_444.c
 apxs -i -S LIBEXECDIR=/usr/local/lib/apache2/modules mod_444.la
 strip --strip-unneeded /usr/local/lib/apache2/modules/mod_444.so
