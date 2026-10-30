@@ -11,13 +11,14 @@ apt-get install apache2-dev binutils
 ## Installation
 
 Download the `.deb` for your Debian version (11, 12, or 13; amd64) from
-GitHub Releases, then install and enable the module:
+GitHub Releases, then install and enable the module as root. Keep only the
+package for your Debian version in the current directory:
 
 ```shell
-sudo apt install ./libapache2-mod-444_*.deb
-sudo a2enmod 444
-sudo apache2ctl configtest
-sudo systemctl reload apache2
+apt install ./libapache2-mod-444_*.deb
+a2enmod 444
+apache2ctl configtest
+systemctl reload apache2
 ```
 
 ### Build from source
